@@ -2,7 +2,7 @@
   "name": "Пальне",
   "short_name": "Пальне",
   "description": "Трекер витрати пального",
-  "start_url": "/",
+  "start_url":  "/Fuel-track/",
   "display": "standalone",
   "background_color": "#1a1a2e",
   "theme_color": "#e94560",
