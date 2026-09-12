@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Пальне+ v29</title>
+  <style>
+/* BUILD:STYLES */
+  </style>
+    <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#2563eb">
+</head>
+<body>
+<div class="app">
+  <div class="nav-shell" id="navShell">
+    <button id="menuToggle" class="menu-toggle" type="button"><span>☰ Меню</span><strong id="activeTabLabel">🛢️ Газ</strong></button>
+    <div class="menu-panel" id="menuPanel">
+      <button class="tab" data-tab="gas">🛢️ Газ</button>
+      <button class="tab" data-tab="petrol">⛽ Бензин</button>
+      <button class="tab" data-tab="calc">🧮 Калькулятор</button>
+      <button class="tab" data-tab="history">📒 Історія</button>
+      <button class="tab" data-tab="stats">📊 Статистика</button>
+      <button class="tab" data-tab="settings">⚙️ Налашт.</button>
+    </div>
+  </div>
+  <header class="topbar">
+    <div class="top-head"><h1>Пальне+</h1><button id="themeBtn" class="theme-btn">🌙</button></div>
+    <div class="balance-grid" id="balanceHeader"></div>
+  </header>
+  <input type="file" id="importFile" class="file-input" accept="application/json,.json" />
+  <main>
+    <section id="tab-gas" class="tab-page"></section>
+    <section id="tab-petrol" class="tab-page hidden"></section>
+    <section id="tab-calc" class="tab-page hidden"></section>
+    <section id="tab-history" class="tab-page hidden"></section>
+    <section id="tab-stats" class="tab-page hidden"></section>
+    <section id="tab-settings" class="tab-page hidden"></section>
+  </main>
+</div>
+<div class="floating-actions"><button class="fab scroll" data-action="scrollTrips" title="До поїздок">↓</button><button class="fab trip" data-action="quickTrip" title="Швидко додати поїздку">＋</button></div>
+<div id="modalRoot"></div><div id="toastRoot"></div><div id="tipRoot"></div>
+<script>
+// BUILD:SCRIPTS
+</script>
+  <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/Fuel-track/sw.js');
+  }
+</script>
+</body>
+</body>
+</html>
+
+
